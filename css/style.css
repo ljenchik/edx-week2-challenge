@@ -3,8 +3,9 @@
 }
 
 :root {
-  --background-color:  rgb(201, 134, 229);
-  --font-color: rgb(110, 9, 124);
+  --font-color: #843c94;
+  --border-color: #cfd3f8;
+  --link-color: #cfd3f8;
 }
 
 body {
@@ -13,6 +14,7 @@ body {
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
   line-height: 1.5;
+  background-color: #e8f2ff;
 }
 
 h1,
@@ -34,16 +36,14 @@ p {
   align-items: center;
   justify-content: flex-start;
   background-color: black;
-  color: var(--background-color);
+  color: var(--link-color);
   width: 100%;
   height: 100px;
 }
 
 #navBar h1 {
-  margin: 10px;
-  padding: 10px;
+  padding-bottom: 8px;
   color: var(--font-color);
-  border-radius: 10px;
   font-size: 30px;
 }
 
@@ -53,25 +53,24 @@ p {
   align-items: center;
   justify-content: flex-end;
   margin-left: auto;
-  margin-right: 10px;
+  margin-right: 20px;
 }
 
 #navigation a {
   margin: 10px;
   font-size: 20px;
-  color: var(--background-color);
+  color: var(--link-color);
   text-decoration: none;
   padding-bottom: 5px;
-  border-bottom: 3px solid var(--background-color);
+  border-bottom: 3px solid var(--link-color);
 }
 
 #navigation a:hover {
-  margin: 10px;
   font-size: 20px;
   color: var(--font-color);
   text-decoration: none;
   padding: 5px;
-  background-color: var(--background-color);
+  background-color: var(--link-color);
   border-radius: 10px;
 }
 
@@ -88,13 +87,19 @@ p {
 
 img {
   border-radius: 50%;
-  margin: 0 0 0 20px;
+  margin: 10px;
 }
 
 .hero-banner h2 {
   padding: 20px;
   color: var(--font-color);
-  font-size: 40px;
+  font-size: 30px;
+  
+}
+
+main {
+  width: 98%;
+  margin: 0 10px;
 }
 
 .page-section {
@@ -105,7 +110,7 @@ img {
 
 .page-section h2 {
   margin: 10px;
-  padding: 10px 20px;
+  padding: 10px;
   font-size: 30px;
   color: var(--font-color);
   border-right: 5px solid var(--font-color);
@@ -163,7 +168,7 @@ img {
   flex-basis: calc(50% - 1em);
   min-height: 150px;
   margin: 0.5rem;
-  border: 5px solid var(--font-color);
+  border: 5px solid var(--border-color);
   border-radius: 10px;
   text-decoration: none;
 }
@@ -197,19 +202,35 @@ img {
 }
 
 .contact-container p a:hover {
-  background-color: var(--background-color);
+  background-color: var(--link-color);
   margin: 10px;
   color: var(--font-color);
   text-decoration: none;
   padding: 5px;
   border-radius: 10px;
-  border-bottom: 3px solid var(--background-color);
+  border-bottom: 0;
 }
 
 
 
 
 @media only screen and (max-width: 576px) {
+  #navigation {
+    display: none;
+  }
+
+  #navBar {
+    justify-content: stretch;
+  }
+
+  #navBar h1 {
+    font-size: 40px;
+  }
+
+  .hero-banner h2 {
+    font-size: 25px;
+    
+  }
 }
 
 
@@ -222,8 +243,8 @@ img {
 
   #navigation a {
     margin: 5px;
-    font-size: 14px;
-    color: var(--background-color);
+    font-size: 16px;
+    color: var(--link-color);
     text-decoration: none;
     border-bottom: none;
   }
@@ -233,8 +254,8 @@ img {
     margin: 4px;
     font-size: 13px;
     background-color: black;
-    border-bottom: 2px solid var(--background-color);
-    color: var(--background-color);
+    border-bottom: 2px solid var(--link-color);
+    color: var(--link-color);
     border-radius: 0;
   }
 
@@ -248,7 +269,7 @@ img {
     font-size: 25px;
     color: var(--font-color);
     border-right: none;
-    padding: 0;
+    padding-left: 0;
     margin: 10px;
     border-bottom: 3px solid var(--font-color);
   }
