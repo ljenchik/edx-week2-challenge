@@ -171,6 +171,11 @@ main {
   border: 5px solid var(--border-color);
   border-radius: 10px;
   text-decoration: none;
+  
+}
+
+.flex-item:hover {
+  box-shadow: inset 0px 0px 8px rgb(218, 230, 241), 0 0 15px #5c568d;
 }
 
 
